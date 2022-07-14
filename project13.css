@@ -1,0 +1,75 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input:focus{
+    outline:none;
+}
+.container{
+    max-width:600px;
+    margin:40px auto;
+    background-color:#eee;
+    padding:20px;
+}
+.container form input{
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #9a9a9a;
+}
+.container form input::placeholder{
+    color: #9a9a9a;
+}
+.container .controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 15px 0;
+    gap:10px;
+}
+.container .controls div{
+    color: #fff;
+    background-color: #009689;
+    padding: 10px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .2s;
+    text-align:center;
+}
+.container .controls div:active{
+    transform: scale(.98);
+}
+.container .results{
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.container .results span{
+    color:#009689;
+    font-weight:bold;
+}
+.container .results span.key{
+    display: block;
+    padding: 15px 0;
+    border-bottom: 2px solid #eee;
+}
+.container .results span.key:last-child{
+    border-bottom: none;
+    padding-bottom:0;
+}
+.container .results span.key:first-child{
+    padding-top:0;
+}
+
+
+@media(max-width:600px){
+    .container .controls{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
